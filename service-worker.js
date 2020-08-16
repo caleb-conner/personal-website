@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/caleb-conner/personal-website/precache-manifest.a2dadd72ab6862e9416db33df1103b49.js"
+  "/caleb-conner/personal-website/precache-manifest.9e515d43d7ac232bd94642c8e6985d92.js"
 );
 
 self.addEventListener('message', (event) => {
