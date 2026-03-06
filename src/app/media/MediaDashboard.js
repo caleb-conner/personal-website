@@ -105,6 +105,12 @@ const SERVICES = [
         'Use any Subsonic-compatible app. When adding a server, enter the URL above with your username and password.',
     },
   },
+  {
+    name: 'D&D Campaigns',
+    description: 'Campaign wiki with world lore, characters, and session notes.',
+    url: 'https://dnd-companion-nu.vercel.app/wiki',
+    logo: '/logos/dnd.svg',
+  },
 ];
 
 export default function MediaDashboard() {
