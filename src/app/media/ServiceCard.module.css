@@ -121,9 +121,25 @@
   padding-left: 68px;
 }
 
+.details {
+  margin-top: 0.25rem;
+}
+
+.summary {
+  font-size: 13px;
+  color: var(--primary-blue);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.summary:hover {
+  text-decoration: underline;
+}
+
 .instructions {
   list-style: decimal;
   padding-left: 1.5rem;
+  margin-top: 0.4rem;
   font-size: 13px;
   color: var(--text-gray);
   line-height: 1.6;

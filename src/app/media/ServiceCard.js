@@ -73,11 +73,14 @@ export default function ServiceCard({ service, status }) {
             <p className={styles.altText}>{service.apps.ios.alt}</p>
           )}
           {service.apps.ios.instructions && (
-            <ol className={styles.instructions}>
-              {service.apps.ios.instructions.map((step, i) => (
-                <li key={i}>{step}</li>
-              ))}
-            </ol>
+            <details className={styles.details}>
+              <summary className={styles.summary}>Setup instructions</summary>
+              <ol className={styles.instructions}>
+                {service.apps.ios.instructions.map((step, i) => (
+                  <li key={i}>{step}</li>
+                ))}
+              </ol>
+            </details>
           )}
         </div>
         <div className={styles.appSection}>
@@ -96,11 +99,14 @@ export default function ServiceCard({ service, status }) {
             <p className={styles.altText}>{service.apps.android.alt}</p>
           )}
           {service.apps.android.instructions && (
-            <ol className={styles.instructions}>
-              {service.apps.android.instructions.map((step, i) => (
-                <li key={i}>{step}</li>
-              ))}
-            </ol>
+            <details className={styles.details}>
+              <summary className={styles.summary}>Setup instructions</summary>
+              <ol className={styles.instructions}>
+                {service.apps.android.instructions.map((step, i) => (
+                  <li key={i}>{step}</li>
+                ))}
+              </ol>
+            </details>
           )}
         </div>
       </div>
