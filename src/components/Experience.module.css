@@ -1,0 +1,111 @@
+.experience {
+  padding: 6rem 2rem;
+  background-color: var(--bg-gray);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experienceCard {
+  background-color: var(--bg-white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.experienceCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.jobTitle {
+  color: var(--primary-blue);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  color: var(--text-dark);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.date {
+  color: var(--text-gray);
+  font-size: 14px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements li {
+  color: var(--text-gray);
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.achievements li:before {
+  content: '▸';
+  color: var(--primary-blue);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.achievements li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience {
+    padding: 4rem 1rem;
+  }
+
+  .experienceCard {
+    padding: 1.5rem;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+  }
+
+  .jobTitle {
+    font-size: 20px;
+  }
+
+  .company {
+    font-size: 16px;
+  }
+}
