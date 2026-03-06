@@ -57,34 +57,52 @@ export default function ServiceCard({ service, status }) {
       </a>
 
       <div className={styles.apps}>
-        <div className={styles.appRow}>
-          <span className={styles.appLabel}>iOS:</span>
-          <a
-            href={service.apps.ios.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.appLink}
-          >
-            {service.apps.ios.name}
-          </a>
+        <div className={styles.appSection}>
+          <div className={styles.appRow}>
+            <span className={styles.appLabel}>iOS:</span>
+            <a
+              href={service.apps.ios.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.appLink}
+            >
+              {service.apps.ios.name}
+            </a>
+          </div>
+          {service.apps.ios.alt && (
+            <p className={styles.altText}>{service.apps.ios.alt}</p>
+          )}
+          {service.apps.ios.instructions && (
+            <ol className={styles.instructions}>
+              {service.apps.ios.instructions.map((step, i) => (
+                <li key={i}>{step}</li>
+              ))}
+            </ol>
+          )}
         </div>
-        {service.apps.ios.alt && (
-          <p className={styles.altText}>{service.apps.ios.alt}</p>
-        )}
-        <div className={styles.appRow}>
-          <span className={styles.appLabel}>Android:</span>
-          <a
-            href={service.apps.android.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.appLink}
-          >
-            {service.apps.android.name}
-          </a>
+        <div className={styles.appSection}>
+          <div className={styles.appRow}>
+            <span className={styles.appLabel}>Android:</span>
+            <a
+              href={service.apps.android.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.appLink}
+            >
+              {service.apps.android.name}
+            </a>
+          </div>
+          {service.apps.android.alt && (
+            <p className={styles.altText}>{service.apps.android.alt}</p>
+          )}
+          {service.apps.android.instructions && (
+            <ol className={styles.instructions}>
+              {service.apps.android.instructions.map((step, i) => (
+                <li key={i}>{step}</li>
+              ))}
+            </ol>
+          )}
         </div>
-        {service.apps.android.alt && (
-          <p className={styles.altText}>{service.apps.android.alt}</p>
-        )}
       </div>
 
       <button

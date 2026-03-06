@@ -80,10 +80,16 @@
 .apps {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   padding: 0.75rem;
   background: var(--bg-gray);
   border-radius: 8px;
+}
+
+.appSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
 .appRow {
@@ -113,6 +119,18 @@
   color: var(--text-gray);
   font-size: 12px;
   padding-left: 68px;
+}
+
+.instructions {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  font-size: 13px;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.instructions li {
+  padding-left: 0.25rem;
 }
 
 .expandButton {
