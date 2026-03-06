@@ -28,7 +28,7 @@ const SERVICES = [
   {
     name: 'Audiobookshelf',
     description: 'Audiobooks and podcasts.',
-    url: 'https://conner-jellyfin.duckdns.org:13378',
+    url: 'http://conner-jellyfin.duckdns.org:13378',
     logo: '/logos/audiobookshelf.svg',
     apps: {
       ios: {
@@ -41,14 +41,14 @@ const SERVICES = [
       },
     },
     connection: {
-      serverUrl: 'https://conner-jellyfin.duckdns.org:13378',
+      serverUrl: 'http://conner-jellyfin.duckdns.org:13378',
       notes: 'Enter the server URL in the app to connect.',
     },
   },
   {
     name: 'Navidrome',
     description: 'Music streaming via Subsonic-compatible apps.',
-    url: 'https://conner-jellyfin.duckdns.org:4533',
+    url: 'http://conner-jellyfin.duckdns.org:4533',
     logo: '/logos/navidrome.png',
     apps: {
       ios: {
@@ -63,7 +63,7 @@ const SERVICES = [
       },
     },
     connection: {
-      serverUrl: 'https://conner-jellyfin.duckdns.org:4533',
+      serverUrl: 'http://conner-jellyfin.duckdns.org:4533',
       notes:
         'Use any Subsonic-compatible app. When adding a server, enter the URL above with your username and password.',
     },
