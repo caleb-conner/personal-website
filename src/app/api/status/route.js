@@ -59,7 +59,14 @@ export async function GET() {
     return NextResponse.json({ services });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to connect to Uptime Kuma' },
+      {
+        error: 'Failed to connect to Uptime Kuma',
+        detail: error.message,
+        urls: [
+          `${baseUrl}/status/${slug}`,
+          `${baseUrl}/status/heartbeat/${slug}`,
+        ],
+      },
       { status: 502 }
     );
   }
