@@ -16,8 +16,8 @@ export async function GET() {
 
   try {
     const [statusRes, heartbeatRes] = await Promise.all([
-      fetch(`${baseUrl}/status/${slug}`, { next: { revalidate: 60 } }),
-      fetch(`${baseUrl}/status/heartbeat/${slug}`, { next: { revalidate: 60 } }),
+      fetch(`${baseUrl}/api/status-page/${slug}`, { next: { revalidate: 60 } }),
+      fetch(`${baseUrl}/api/status-page/heartbeat/${slug}`, { next: { revalidate: 60 } }),
     ]);
 
     if (!statusRes.ok || !heartbeatRes.ok) {
@@ -63,8 +63,8 @@ export async function GET() {
         error: 'Failed to connect to Uptime Kuma',
         detail: error.message,
         urls: [
-          `${baseUrl}/status/${slug}`,
-          `${baseUrl}/status/heartbeat/${slug}`,
+          `${baseUrl}/api/status-page/${slug}`,
+          `${baseUrl}/api/status-page/heartbeat/${slug}`,
         ],
       },
       { status: 502 }
