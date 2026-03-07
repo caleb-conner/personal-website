@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import ServiceCard from './ServiceCard';
+import FileUpload from './FileUpload';
 import styles from './MediaDashboard.module.css';
 
 const SERVICES = [
@@ -150,6 +151,7 @@ export default function MediaDashboard() {
           />
         ))}
       </div>
+      <FileUpload />
     </div>
   );
 }
